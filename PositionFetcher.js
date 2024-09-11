@@ -42,7 +42,7 @@ function fetchGitHubData() {
 
 // Function to get the most recent date from column E
 function getMostRecentDate(sheet) {
-  const dates = sheet.getRange('E:E').getValues().flat().filter(String;
+  const dates = sheet.getRange('E:E').getValues().flat().filter(String);
   const dateObjects = dates.map(date => new Date(date)).filter(d => !isNaN(d));
   return dateObjects.length ? new Date(Math.max.apply(null, dateObjects)) : null;
 }
